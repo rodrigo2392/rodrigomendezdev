@@ -12,7 +12,6 @@ interface Props {
 
 
 const Videos = ({videos}: Props) => {
-    console.log({videos})
     return (
         <div className='pb-10'>
           <h1 className='text-center font-bold text-3xl'>Videos</h1>

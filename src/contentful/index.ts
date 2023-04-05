@@ -19,8 +19,6 @@ export const getVideos = async () => {
     const response = await client.getEntries({
         content_type: 'youtubeVideo',
       })
-
-    console.log(response)
   
     return response.items;
 };
