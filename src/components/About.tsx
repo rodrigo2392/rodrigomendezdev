@@ -19,7 +19,7 @@ export default function About(){
                 </a>
                 <div className='grid grid-cols-1 md:grid-cols-2 '>
                     <div className='flex items-center pb-6 md:mr-10'>
-                        <Image  src={DeveloperImage} alt="Acerca de mí" height={400} width={400} className="w-full h-auto rounded-xl"/>
+                        <Image  src={DeveloperImage} alt="Acerca de mí" height={350} width={350} className="w-full h-auto rounded-xl"/>
                     </div>
                     <div>
                         <p className={`${muslish.className} text-secondary`}>

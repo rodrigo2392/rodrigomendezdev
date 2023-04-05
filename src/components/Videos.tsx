@@ -30,7 +30,7 @@ const Videos = ({videos}: Props) => {
                     videos.map(el => (
                         <a href={el.fields.url} target="_blank" className='cursor-pointer w-full' key={el.sys.id} >
                             <div className='bg-white w-full shadow-md rounded-b-lg relative'>
-                                <Image src={`https:${el.fields.image.fields.file.url}`} width={600} height={600} alt="Linkedin" className='w-full h-52 lg:h-36 rounded-t-lg object-cover'  />
+                                <Image src={`https:${el.fields.image.fields.file.url}`} width={326} height={260} alt="Linkedin" className='w-full h-52 lg:h-36 rounded-t-lg object-cover'  />
                                 <div className='px-5 py-5 pb-5 '>
                                     <h2 className='font-bold'>{el.fields.title}</h2>
                                 </div>

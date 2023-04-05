@@ -64,24 +64,25 @@ const Header = () => {
                     </a>
                 </div>
             </div>
-            <div className='flex align-middle justify-center h-auto order-1 md:order-2 mb-10 md:mb-0' onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
+            <div className='flex justify-center h-auto order-1 md:order-2 mb-10 md:mb-0' onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
                 <Image
-                src={hover ? ProfileImageColor : ProfileImage}
-                width={1024}
-                height={1024}
-                alt="Perfil"
-                className='w-60 h-auto rounded-full'
+                    src={ProfileImageColor}
+                    alt="Perfil"
+                    className='rounded-full'
+                    width={300}
+                    loading="eager"
+                    priority
                 />
             </div>
         </div>
         <div className='w-full flex justify-center mt-10 flex-col text-center'>
             <h1 className='font-bold text-3xl'>Tecnologías</h1>
             <p  className={`font-bold text-primary text-center mb-6 pt-4`}>Con lo que actualmente trabajo 💻</p>
-            <div className='flex gap-10 flex-wrap justify-center align-middle mt-5'>
+            <div className='flex gap-10 flex-wrap justify-center  mt-5'>
                 {
                     stack.map(el => (
                         <div className='flex justify-center items-center bg-white rounded-full shadow-md w-16 h-16' key={el.name} >
-                            <Image src={el.image} alt="Html"  width={400} height={400} className='w-10 h-10' />
+                            <Image src={el.image} alt="Html"  width={50} height={50} className='w-10 h-10' />
                         </div>
                     ))
                 }

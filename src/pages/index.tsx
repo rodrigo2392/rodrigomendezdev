@@ -78,41 +78,42 @@ export default function Home({videos}: Props) {
         <meta name="og:site_name" content="rodrigomendez.dev" />
         <meta name="og:locale" content="es_MX" />
         <meta name="og:type" content="website" />
-        
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={poppins.className}>
         <Navbar />
-        <Bounce delay={200} triggerOnce>
+        
           <JackInTheBox  delay={200} triggerOnce>
-          <div className='flex justify-center align-middle pt-10 md:pt-24 text-primary bg-bgGray pb-10 px-10' id="inicio">
+          <div className='flex justify-center pt-10 md:pt-24 text-primary bg-bgGray pb-10 px-10' id="inicio">
             <div className='max-w-4xl'>
               <Header />
             </div>
           </div>
           </JackInTheBox>
-          <div className='flex justify-center align-middle pt-10 md:pt-24 text-primary px-10' id="acerca">
+        <Bounce delay={200} triggerOnce>
+          <div className='flex justify-center pt-10 md:pt-24 text-primary px-10' id="acerca">
             <div className='max-w-4xl'>
               <About />
             </div>
           </div>
-          <div className='flex justify-center align-middle pt-10 md:pt-24 text-primary bg-bgGray pb-10 px-10'  id="proyectos">
+          <div className='flex justify-center pt-10 md:pt-24 text-primary bg-bgGray pb-10 px-10'  id="proyectos">
             <div className='max-w-4xl'>
               <Videos videos={videos} />
             </div>
           </div>
-          <div className='flex justify-center align-middle pt-10 md:pt-24 text-primary pb-10 px-10'  id="contacto">
+          <div className='flex justify-center pt-10 md:pt-24 text-primary pb-10 px-10'  id="contacto">
             <div className='max-w-4xl'>
               <Social />
             </div>
           </div>
-          <div className='flex justify-center align-middle pt-10 md:pt-24 text-primary bg-bgGray pb-10 px-10'>
+          <div className='flex justify-center pt-10 md:pt-24 text-primary bg-bgGray pb-10 px-10'>
             <div className='max-w-4xl'>
               <Contact />
             </div>
           </div>
         </Bounce>
-        <button onClick={backToTop} type="button"  className={`${back?'fixed':'hidden'} p-3 bg-black text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out bottom-9 right-5`}>
+        <button title="Volver arriba" aria-label='Volver arriba' onClick={backToTop} type="button"  className={`${back?'fixed':'hidden'} p-3 bg-black text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out bottom-9 right-5`}>
           <svg aria-hidden="true" focusable="false" data-prefix="fas" className="w-4 h-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>
         </button>
         <Footer />
