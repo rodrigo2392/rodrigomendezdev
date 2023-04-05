@@ -58,23 +58,23 @@ export default function Home({videos}: Props) {
         <Navbar />
         <Bounce delay={200} triggerOnce>
           <JackInTheBox  delay={200} triggerOnce>
-          <div className='flex justify-center align-middle pt-10 md:pt-24 text-primary bg-bgGray pb-10 px-10' id="header">
+          <div className='flex justify-center align-middle pt-10 md:pt-24 text-primary bg-bgGray pb-10 px-10' id="inicio">
             <div className='max-w-4xl'>
               <Header />
             </div>
           </div>
           </JackInTheBox>
-          <div className='flex justify-center align-middle pt-10 md:pt-24 text-primary px-10'>
+          <div className='flex justify-center align-middle pt-10 md:pt-24 text-primary px-10' id="acerca">
             <div className='max-w-4xl'>
               <About />
             </div>
           </div>
-            <div className='flex justify-center align-middle pt-10 md:pt-24 text-primary bg-bgGray pb-10 px-10'>
-              <div className='max-w-4xl'>
-                <Videos videos={videos} />
-              </div>
+          <div className='flex justify-center align-middle pt-10 md:pt-24 text-primary bg-bgGray pb-10 px-10'  id="proyectos">
+            <div className='max-w-4xl'>
+              <Videos videos={videos} />
             </div>
-          <div className='flex justify-center align-middle pt-10 md:pt-24 text-primary pb-10 px-10'>
+          </div>
+          <div className='flex justify-center align-middle pt-10 md:pt-24 text-primary pb-10 px-10'  id="contacto">
             <div className='max-w-4xl'>
               <Social />
             </div>

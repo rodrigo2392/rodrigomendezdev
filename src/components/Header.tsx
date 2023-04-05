@@ -53,7 +53,7 @@ const Header = () => {
             <div className='flex flex-col justify-center order-2 md:order-1 text-center md:text-left'>
                 <h1 className='font-bold text-5xl'>Frontend Developer</h1>
                 <p className={` ${muslish.className} pt-6 text-secondary`} >
-                    ¡Hola! Soy Rodrigo Méndez, tengo 10 años de experiencia y vivo en Guadalajara, Jalisco, México.
+                    ¡Hola! Soy Rodrigo Méndez, tengo 10 años de experiencia como desarrollador de software.
                 </p>
                 <div className='pt-4 flex flex-row gap-2 justify-center md:justify-start'>
                     <a href="https://www.linkedin.com/in/%E2%98%95-rodrigo-m%C3%A9ndez/" target="_blank">

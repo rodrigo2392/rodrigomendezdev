@@ -15,22 +15,22 @@ const Navbar = () => {
     <div className={`${open ? '' : 'hidden'} w-full md:block md:w-auto bg-white`}>
       <ul className="text-center font-medium flex flex-col p-2 md:p-0 mt-2  rounded-lg md:flex-row md:space-x-8 md:mt-0">
         <li>
-          <a href="#" className="block py-2 pl-2 pr-2 rounded text-sm " aria-current="page">
+          <a href="#inicio" className="block py-2 pl-2 pr-2 rounded text-sm " aria-current="page">
             Inicio
           </a>
         </li>
         <li>
-          <a href="#" className="block py-2 pl-1 pr-2 rounded text-sm" aria-current="page">
+          <a href="#acerca" className="block py-2 pl-1 pr-2 rounded text-sm" aria-current="page">
             Acerca
           </a>
         </li>
         <li>
-          <a href="#" className="block py-2 pl-1 pr-2 rounded text-sm" aria-current="page">
+          <a href="#proyectos" className="block py-2 pl-1 pr-2 rounded text-sm" aria-current="page">
             Proyectos
           </a>
         </li>
         <li>
-          <a href="#" className="block py-2 pl-1 pr-4rounded text-sm" aria-current="page">
+          <a href="#contacto" className="block py-2 pl-1 pr-4rounded text-sm" aria-current="page">
             Contacto
           </a>
         </li>
