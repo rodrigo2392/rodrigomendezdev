@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Mulish } from 'next/font/google'
 import ProfileImage from '../../public/assets/image/perfil.png';
+import ProfileImageColor from '../../public/assets/image/perfil-c.png';
 import TailwindImage from '../../public/assets/image/tailwind.png';
 import ReactImage from '../../public/assets/image/react.png';
 import HtmlImage from '../../public/assets/image/html.png';
@@ -45,6 +46,7 @@ const stack = [
 ]
 
 const Header = () => {
+    const [hover, setHover] = React.useState(false)
     return (
         <>
         <div className='grid grid-cols-1 md:grid-cols-2'>
@@ -62,9 +64,9 @@ const Header = () => {
                     </a>
                 </div>
             </div>
-            <div className='flex align-middle justify-center h-auto order-1 md:order-2 mb-10 md:mb-0'>
+            <div className='flex align-middle justify-center h-auto order-1 md:order-2 mb-10 md:mb-0' onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
                 <Image
-                src={ProfileImage}
+                src={hover ? ProfileImageColor : ProfileImage}
                 width={1024}
                 height={1024}
                 alt="Perfil"
