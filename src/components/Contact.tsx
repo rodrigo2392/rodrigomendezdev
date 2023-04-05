@@ -1,0 +1,25 @@
+import React from 'react';
+import Image from 'next/image';
+import GmailIcon from '../../public/assets/icons/gmail.svg';
+import LinkedinIcon from '../../public/assets/icons/linkedin.svg';
+
+const Contact = () => {
+    return (
+        <div className='pb-10'>
+          <h1 className='text-center font-bold text-3xl'>Contacto</h1>
+            <p className={`font-bold text-primary text-center mr-2 pt-4`}>
+            Puedes enviarme un correo electrónico ✉️
+            </p>
+            <div className='grid grid-cols-1'>
+                <div className='w-full px-10 py-6 flex flex-col items-center text-center'>
+                    <div className='mt-5'>
+                        <h2 className='font-bold text-lg'>Correo electrónico:</h2>
+                        <p className='text-secondary  text-lg'>itic.rodrigomg@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+          )
+};
+
+export default Contact;
