@@ -70,6 +70,7 @@ export default function Home({ videos, blogPosts }: Props) {
                             key={section.id}
                             id={section.id}
                             gray={index % 2 === 0}
+                            noPaddingTop={index === 0}
                         >
                             {section.section}
                         </Container>

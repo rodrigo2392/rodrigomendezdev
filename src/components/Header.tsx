@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Mulish } from "next/font/google";
+import ShareButton from "@/components/ShareButton";
 import ProfileImageColor from "../../public/assets/image/perfil-c.png";
 import TailwindImage from "../../public/assets/image/tailwind.png";
 import ReactImage from "../../public/assets/image/react.png";
@@ -47,6 +48,16 @@ const stack = [
 const Header = () => {
     return (
         <>
+            <div className="flex w-full justify-center md:justify-end">
+                <div className="pb-9 pt-7 flex flex-col md:flex-row gap-6  items-center">
+                    <ShareButton
+                        text="Mira el sitio web de Rodrigo"
+                        title="Rodrigo Méndez"
+                        url="https://rodrigomendez.dev"
+                        black
+                    />
+                </div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="flex flex-col justify-center order-2 md:order-1 text-center md:text-left">
                     <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl">
