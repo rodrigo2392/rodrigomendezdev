@@ -71,7 +71,7 @@ const Navbar = ({ exterior }: Props) => {
                                 aria-current="page"
                                 scroll={false}
                             >
-                                Acerca
+                                Sobre mí
                             </Link>
                         </li>
                         <li>

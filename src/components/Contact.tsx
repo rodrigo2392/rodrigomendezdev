@@ -13,9 +13,12 @@ const Contact = () => {
                         <h2 className="font-bold text-lg">
                             Correo electrónico:
                         </h2>
-                        <p className="text-secondary  text-lg">
+                        <a
+                            href="mailto:itic.rodrigomg@gmail.com"
+                            className="text-secondary  text-lg"
+                        >
                             itic.rodrigomg@gmail.com
-                        </p>
+                        </a>
                     </div>
                 </div>
             </div>

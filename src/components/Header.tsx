@@ -49,7 +49,9 @@ const Header = () => {
         <>
             <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="flex flex-col justify-center order-2 md:order-1 text-center md:text-left">
-                    <h1 className="font-bold text-5xl">Frontend Developer</h1>
+                    <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl">
+                        Frontend Developer
+                    </h1>
                     <p className={` ${muslish.className} pt-6 text-secondary`}>
                         ¡Hola! Soy Rodrigo Méndez, tengo 10 años de experiencia
                         como desarrollador de software.
