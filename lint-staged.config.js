@@ -1,9 +1,6 @@
 module.exports = {
-    // check build
-    "**/*.(ts|tsx|js|json)": () => "npm run build",
-
-    // this will check Typescript files
-    "**/*.(ts|tsx)": () => "yarn tsc --noEmit",
+    // this will check Typescript files and check build
+    "**/*.(ts|tsx)": () => ["yarn tsc --noEmit", "npm run build"],
 
     // This will lint and format TypeScript and JavaScript files
     "**/*.(ts|tsx|js)": filenames => [
