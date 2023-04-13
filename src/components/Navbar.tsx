@@ -51,7 +51,7 @@ const Navbar = ({ exterior }: Props) => {
                         open ? "" : "hidden"
                     } w-full md:block md:w-auto bg-white`}
                 >
-                    <ul className="text-center font-medium flex flex-col p-2 md:p-0 mt-2  rounded-lg md:flex-row md:space-x-8 md:mt-0">
+                    <ul className="text-center font-medium flex flex-col p-2 md:p-0 mt-2  rounded-lg md:flex-row md:space-x-5 md:mt-0">
                         <li>
                             <Link
                                 href={`${exterior ? "/#inicio" : "#inicio"}`}

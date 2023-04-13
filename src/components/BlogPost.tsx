@@ -9,6 +9,7 @@ import {
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import Disqus from "@/components/Disqus";
+import ShareButton from "@/components/ShareButton";
 import dayjs from "dayjs";
 import "dayjs/locale/es";
 
@@ -63,9 +64,17 @@ const Post = ({ post }: Props) => {
             <span className="text-gray-500 text-sm pl-5 md:pl-0">
                 {currentDate}
             </span>
-            <h1 className="pl-5 text-left font-bold text-3xl  mt-2 md:pl-0">
-                {post.fields.title}
-            </h1>
+            <div className="flex flex-col md:flex-row justify-between w-full items-start md:px-0 px-5">
+                <h1 className="text-left font-bold text-3xl  mt-2 md:pl-0 flex-2 break-words pr-3">
+                    {post.fields.title}
+                </h1>
+                <div className="pt-5 md:pt-2 pb-5 w-full md:flex md:justify-end flex-1">
+                    <ShareButton
+                        title={post.fields.title}
+                        url={`https://rodrigomendez.dev/blog/${post.fields.slug}`}
+                    />
+                </div>
+            </div>
             <div className="pl-5 pt-5 flex flex-wrap gap-2 w-full  md:pl-0">
                 {post.fields.tags.map(tag => (
                     <span
@@ -93,6 +102,14 @@ const Post = ({ post }: Props) => {
                             post.fields.content,
                             options
                         )}
+                    </div>
+                </div>
+                <div className="flex justify-end pb-5 pt-5 w-full">
+                    <div className="px-5 w-full flex justify-end">
+                        <ShareButton
+                            title={post.fields.title}
+                            url={`https://rodrigomendez.dev/blog/${post.fields.slug}`}
+                        />
                     </div>
                 </div>
                 <div className="px-5 py-5">
