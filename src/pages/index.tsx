@@ -66,7 +66,11 @@ export default function Home({ videos, blogPosts }: Props) {
                 <Navbar />
                 <Fade delay={300} triggerOnce>
                     {Sections.map((section, index) => (
-                        <Container id={section.id} gray={index % 2 === 0}>
+                        <Container
+                            key={section.id}
+                            id={section.id}
+                            gray={index % 2 === 0}
+                        >
                             {section.section}
                         </Container>
                     ))}

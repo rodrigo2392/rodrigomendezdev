@@ -95,7 +95,9 @@ const Post = ({ post }: Props) => {
                         )}
                     </div>
                 </div>
-                <Disqus post={post} />
+                <div className="px-5 py-5">
+                    <Disqus post={post} />
+                </div>
             </div>
         </div>
     );
