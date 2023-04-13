@@ -39,7 +39,7 @@ const Videos = ({ videos }: Props) => {
                                 src={`https:${el.fields.image.fields.file.url}`}
                                 width={326}
                                 height={260}
-                                alt="Linkedin"
+                                alt={el.fields.title}
                                 className="w-full h-52 lg:h-36 rounded-t-lg object-cover"
                             />
                             <div className="px-5 py-5 pb-5 ">

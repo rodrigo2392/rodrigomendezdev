@@ -104,7 +104,7 @@ export default function Home({ videos, blogPosts }: Props) {
                 <meta name="twitter:creator" content="@rodrigom_dev" />
                 <meta
                     name="twitter:image:src"
-                    content="https://rodrigomendez.dev/_ipx/w_1080,q_75/%2F_next%2Fstatic%2Fmedia%2Fperfil-c.2d6e09cb.png?url=%2F_next%2Fstatic%2Fmedia%2Fperfil-c.2d6e09cb.png&w=1080&q=75"
+                    content="https://rodrigomendez.dev/banner.png"
                 />
 
                 <meta
@@ -117,12 +117,61 @@ export default function Home({ videos, blogPosts }: Props) {
                 />
                 <meta
                     name="og:image"
-                    content="https://rodrigomendez.dev/_ipx/w_1080,q_75/%2F_next%2Fstatic%2Fmedia%2Fperfil-c.2d6e09cb.png?url=%2F_next%2Fstatic%2Fmedia%2Fperfil-c.2d6e09cb.png&w=1080&q=75"
+                    content="https://rodrigomendez.dev/banner.png"
                 />
                 <meta name="og:url" content="https://rodrigomendez.dev" />
                 <meta name="og:site_name" content="rodrigomendez.dev" />
                 <meta name="og:locale" content="es_MX" />
                 <meta name="og:type" content="website" />
+
+                <meta
+                    name="application-name"
+                    content="Rodrigo Méndez - Frontend developer"
+                />
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta
+                    name="apple-mobile-web-app-status-bar-style"
+                    content="default"
+                />
+                <meta
+                    name="apple-mobile-web-app-title"
+                    content="Rodrigo Méndez - Frontend developer"
+                />
+                <meta
+                    name="description"
+                    content="Rodrigo Méndez desarrollador frontend con 10 años de experiencia"
+                />
+                <meta name="format-detection" content="telephone=no" />
+                <meta name="mobile-web-app-capable" content="yes" />
+                <meta
+                    name="msapplication-config"
+                    content="/icons/browserconfig.xml"
+                />
+                <meta name="msapplication-TileColor" content="#2B5797" />
+                <meta name="msapplication-tap-highlight" content="no" />
+                <meta name="theme-color" content="#FFF" />
+
+                <link
+                    rel="apple-touch-icon"
+                    href="/icons/touch-icon-iphone.png"
+                />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="152x152"
+                    href="/icons/touch-icon-ipad.png"
+                />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    href="/icons/touch-icon-iphone-retina.png"
+                />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="167x167"
+                    href="/icons/touch-icon-ipad-retina.png"
+                />
+
+                <link rel="manifest" href="/manifest.json" />
 
                 <link rel="icon" href="/favicon.ico" />
             </Head>

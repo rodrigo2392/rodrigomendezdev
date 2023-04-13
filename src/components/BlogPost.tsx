@@ -27,7 +27,7 @@ const options = {
                     src={`https:${data?.target?.fields?.file?.url}`}
                     width={1080}
                     height={720}
-                    alt="Linkedin"
+                    alt={data?.target?.fields?.title}
                     className="w-1/2 h-auto object-cover md:rounded-xl mt-5 mb-5"
                 />
             );
@@ -81,7 +81,7 @@ const Post = ({ post }: Props) => {
                     src={`https:${post.fields.cover.fields.file.url}`}
                     width={1080}
                     height={720}
-                    alt="Linkedin"
+                    alt={post.fields.title}
                     className="w-full h-80 object-cover md:rounded-xl"
                 />
             </div>

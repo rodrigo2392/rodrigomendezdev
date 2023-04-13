@@ -76,7 +76,7 @@ const Header = () => {
                                 src={GithubIcon}
                                 width={45}
                                 height={45}
-                                alt="Linkedin"
+                                alt="Github"
                             />
                         </a>
                     </div>
