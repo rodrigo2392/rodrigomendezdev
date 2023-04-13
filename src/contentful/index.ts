@@ -22,3 +22,20 @@ export const getVideos = async () => {
   
     return response.items;
 };
+
+export const getBlog = async () => {
+    const response = await client.getEntries({
+        content_type: 'blog',
+      })
+  
+    return response.items;
+};
+
+export const getPost = async (slug:string) => {
+    const response = await client.getEntries({
+        content_type: 'blog',
+        'fields.slug': slug
+      })
+  
+    return response.items;
+};

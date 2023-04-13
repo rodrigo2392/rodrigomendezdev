@@ -6,12 +6,12 @@ import Header from '@/components/Header'
 import About from '@/components/About'
 import Footer from '@/components/Footer'
 import Videos from '@/components/Videos'
+import BlogList from '@/components/BlogList'
 import Contact from '@/components/Contact'
 import Social from '@/components/Social'
-import {getVideos} from '../contentful'
-import {YoutubeVideo} from '../contentful/types'
+import {getVideos, getBlog} from '../contentful'
+import {YoutubeVideo, BlogPost} from '../contentful/types'
 import {Bounce ,JackInTheBox} from 'react-awesome-reveal';
-import Meta from '@/components/Meta';
 
 const poppins = Poppins({
   weight: ['400', '700'],
@@ -21,8 +21,9 @@ const poppins = Poppins({
 
 interface Props {
   videos: YoutubeVideo[]
+  blogPosts: BlogPost[]
 }
-export default function Home({videos}: Props) {
+export default function Home({videos, blogPosts}: Props) {
   const [back, setBack] = React.useState(false)
   const backToTop = () => {
     document.body.scrollTop = 0;
@@ -85,29 +86,34 @@ export default function Home({videos}: Props) {
         <Navbar />
         
           <JackInTheBox  delay={200} triggerOnce>
-          <div className='flex justify-center pt-10 md:pt-24 text-primary bg-bgGray pb-10 px-10' id="inicio">
+          <div className='flex justify-center pt-24 text-primary bg-bgGray pb-10 px-10' id="inicio">
             <div className='max-w-4xl'>
               <Header />
             </div>
           </div>
           </JackInTheBox>
         <Bounce delay={200} triggerOnce>
-          <div className='flex justify-center pt-10 md:pt-24 text-primary px-10' id="acerca">
+          <div className='flex justify-center pt-24 text-primary px-10' id="acerca">
             <div className='max-w-4xl'>
               <About />
             </div>
           </div>
-          <div className='flex justify-center pt-10 md:pt-24 text-primary bg-bgGray pb-10 px-10'  id="proyectos">
+          <div className='flex justify-center pt-24 text-primary bg-bgGray px-10'  id="proyectos">
+            <div className='max-w-4xl'>
+              <BlogList blogPosts={blogPosts} />
+            </div>
+          </div>
+          <div className='flex justify-center pt-16 text-primary bg-bgGray pb-10 px-10'  id="proyectos">
             <div className='max-w-4xl'>
               <Videos videos={videos} />
             </div>
           </div>
-          <div className='flex justify-center pt-10 md:pt-24 text-primary pb-10 px-10'  id="contacto">
+          <div className='flex justify-center pt-24 text-primary pb-10 px-10'  id="contacto">
             <div className='max-w-4xl'>
               <Social />
             </div>
           </div>
-          <div className='flex justify-center pt-10 md:pt-24 text-primary bg-bgGray pb-10 px-10'>
+          <div className='flex justify-center pt-24 text-primary bg-bgGray pb-10 px-10'>
             <div className='max-w-4xl'>
               <Contact />
             </div>
@@ -124,8 +130,10 @@ export default function Home({videos}: Props) {
 
 Home.getInitialProps = async (ctx: any) => {
   const videos = await getVideos();
+  const blogPosts = await getBlog();
   return {
-    videos
+    videos,
+    blogPosts
   };
 };
 

@@ -1,8 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import IslandImage from '../../public/assets/videos/island.webp';
-import CrearImage from '../../public/assets/videos/crear.png';
-import MuriendoImage from '../../public/assets/videos/muriendo.png';
 import YoutubeIcon from '../../public/assets/icons/youtube.svg';
 import { YoutubeVideo } from '@/contentful/types';
 

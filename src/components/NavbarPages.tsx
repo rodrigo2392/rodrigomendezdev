@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'
 
 const Navbar = () => {
     const [open, setOpen] = React.useState(false);
@@ -15,24 +16,24 @@ const Navbar = () => {
     <div className={`${open ? '' : 'hidden'} w-full md:block md:w-auto bg-white`}>
       <ul className="text-center font-medium flex flex-col p-2 md:p-0 mt-2  rounded-lg md:flex-row md:space-x-8 md:mt-0">
         <li>
-          <a href="#inicio" onClick={()=> setOpen(false)} className="block py-2 pl-2 pr-2 rounded text-sm " aria-current="page">
+          <Link href="/" onClick={()=> setOpen(false)} className="block py-2 pl-2 pr-2 rounded text-sm " aria-current="page">
             Inicio
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#acerca" onClick={()=> setOpen(false)} className="block py-2 pl-1 pr-2 rounded text-sm" aria-current="page">
+          <Link href="/#acerca" onClick={()=> setOpen(false)} className="block py-2 pl-1 pr-2 rounded text-sm" aria-current="page">
             Acerca
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#proyectos" onClick={()=> setOpen(false)} className="block py-2 pl-1 pr-2 rounded text-sm" aria-current="page">
+          <Link href="/#proyectos" onClick={()=> setOpen(false)} className="block py-2 pl-1 pr-2 rounded text-sm" aria-current="page">
             Proyectos
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#contacto" onClick={()=> setOpen(false)} className="block py-2 pl-1 pr-4rounded text-sm" aria-current="page">
+          <Link href="/#contacto" onClick={()=> setOpen(false)} className="block py-2 pl-1 pr-4rounded text-sm" aria-current="page">
             Contacto
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
