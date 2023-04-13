@@ -8,6 +8,7 @@ import {
 } from "@contentful/rich-text-react-renderer";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
+import Disqus from "@/components/Disqus";
 import dayjs from "dayjs";
 import "dayjs/locale/es";
 
@@ -94,6 +95,7 @@ const Post = ({ post }: Props) => {
                         )}
                     </div>
                 </div>
+                <Disqus post={post} />
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import React from "react";
 import Head from "next/head";
 import { NextPageContext } from "next";
 import { Poppins } from "next/font/google";
-import Navbar from "@/components/NavbarPages";
+import Navbar from "@/components/Navbar";
 import BlogPost from "@/components/BlogPost";
 import Footer from "@/components/Footer";
 import { getPost } from "../../contentful";
@@ -101,7 +101,7 @@ export default function Home({ post }: Props) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={poppins.className}>
-                <Navbar />
+                <Navbar exterior />
                 <div
                     className="flex justify-center pt-10 text-primary bg-bgGray pb-10 md:px-10"
                     id="inicio"

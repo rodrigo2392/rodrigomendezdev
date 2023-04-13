@@ -1,19 +1,28 @@
 import React from "react";
+import Link from "next/link";
 
-const Navbar = () => {
+interface Props {
+    exterior?: boolean;
+}
+
+const defaultProps = {
+    exterior: false,
+};
+
+const Navbar = ({ exterior }: Props) => {
     const [open, setOpen] = React.useState(false);
 
     return (
         <nav className="bg-white sticky top-0 z-50 shadow-md">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 bg-white">
-                <a
+                <Link
                     href="https://rodrigomendez.dev/"
                     className="flex items-center"
                 >
                     <span className="self-center text-lg font-semibold whitespace-nowrap text-primary">
                         rodrigomendez.dev
                     </span>
-                </a>
+                </Link>
                 <button
                     title="Open Menu"
                     aria-label="Open Menu"
@@ -44,44 +53,59 @@ const Navbar = () => {
                 >
                     <ul className="text-center font-medium flex flex-col p-2 md:p-0 mt-2  rounded-lg md:flex-row md:space-x-8 md:mt-0">
                         <li>
-                            <a
-                                href="#inicio"
+                            <Link
+                                href={`${exterior ? "/#inicio" : "#inicio"}`}
                                 onClick={() => setOpen(false)}
                                 className="block py-2 pl-2 pr-2 rounded text-sm "
                                 aria-current="page"
+                                scroll={false}
                             >
                                 Inicio
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#acerca"
+                            <Link
+                                href={`${exterior ? "/#acerca" : "#acerca"}`}
                                 onClick={() => setOpen(false)}
                                 className="block py-2 pl-1 pr-2 rounded text-sm"
                                 aria-current="page"
+                                scroll={false}
                             >
                                 Acerca
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#proyectos"
+                            <Link
+                                href={`${exterior ? "/#blog" : "#blog"}`}
                                 onClick={() => setOpen(false)}
                                 className="block py-2 pl-1 pr-2 rounded text-sm"
                                 aria-current="page"
+                                scroll={false}
                             >
-                                Proyectos
-                            </a>
+                                Blog
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#contacto"
+                            <Link
+                                href={`${exterior ? "/#videos" : "#videos"}`}
+                                onClick={() => setOpen(false)}
+                                className="block py-2 pl-1 pr-2 rounded text-sm"
+                                aria-current="page"
+                                scroll={false}
+                            >
+                                Videos
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href={`${exterior ? "/#redes" : "#redes"}`}
                                 onClick={() => setOpen(false)}
                                 className="block py-2 pl-1 pr-4rounded text-sm"
                                 aria-current="page"
+                                scroll={false}
                             >
                                 Contacto
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -89,5 +113,7 @@ const Navbar = () => {
         </nav>
     );
 };
+
+Navbar.defaultProps = defaultProps;
 
 export default Navbar;

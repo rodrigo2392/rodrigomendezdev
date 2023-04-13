@@ -18,7 +18,7 @@ const BlogList = ({ blogPosts }: Props) => {
                 </div>
             </a>
 
-            <div className="grid grid-cols-1 gap-7 lg:grid-cols-2  w-full">
+            <div className="grid grid-cols-1 gap-7 xl:grid-cols-2  w-full">
                 {blogPosts?.map(el => {
                     return <BlogCard el={el} key={el.fields.slug} />;
                 })}

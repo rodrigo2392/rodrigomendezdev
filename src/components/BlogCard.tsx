@@ -25,9 +25,9 @@ export default function BlogCard({ el }: Props) {
                 <div className="bg-white w-full shadow-md rounded-b-lg relative lg:flex">
                     <Image
                         src={`https:${el.fields.cover.fields.file.url}`}
-                        width={326}
-                        height={260}
-                        alt="Linkedin"
+                        width={600}
+                        height={400}
+                        alt={el.fields.title}
                         className="w-full h-44 lg:w-40 lg:h-auto rounded-t-lg lg:rounded-none object-cover"
                     />
                     <div className="pb-3">
