@@ -1,18 +1,14 @@
 import { createClient, ContentfulClientApi } from "contentful";
 
-const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN || "";
-const space = process.env.CONTENTFUL_SPACE_ID || "";
-const environment = process.env.CONTENTFUL_ENVIRONMENT || "";
+const accessToken = process.env.NEXT_PUBLIC_ACCESS_TOKEN || "";
+const space = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID || "";
+const environment = process.env.NEXT_PUBLIC__ENVIRONMENT || "";
 
-let client: ContentfulClientApi;
-
-if (accessToken !== "") {
-    client = createClient({
-        accessToken,
-        space,
-        environment,
-    }) as ContentfulClientApi;
-}
+const client = createClient({
+    accessToken,
+    space,
+    environment,
+}) as ContentfulClientApi;
 
 export const getVideos = async () => {
     const response = await client.getEntries({

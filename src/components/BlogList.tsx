@@ -1,7 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import { BlogPost } from "@/contentful/types";
-import dayjs from "dayjs";
+import BlogCard from "./BlogCard";
 
 interface Props {
     blogPosts: BlogPost[];
@@ -20,54 +19,9 @@ const BlogList = ({ blogPosts }: Props) => {
             </a>
 
             <div className="grid grid-cols-1 gap-7 lg:grid-cols-2  w-full">
-                {blogPosts?.map(el => (
-                    <div key={el.fields.slug}>
-                        <a
-                            href={`blog/${el.fields.slug}`}
-                            className="cursor-pointer w-full"
-                        >
-                            <div
-                                className="bg-white w-full shadow-md rounded-b-lg relative lg:flex"
-                                key={el.sys.id}
-                            >
-                                <Image
-                                    src={`https:${el.fields.cover.fields.file.url}`}
-                                    width={326}
-                                    height={260}
-                                    alt="Linkedin"
-                                    className="w-full h-44 lg:w-40 lg:h-auto rounded-t-lg lg:rounded-none object-cover"
-                                />
-                                <div>
-                                    <span className="absolute text-xs -mt-14 right-2 lg:right-2 lg:mt-0 lg:top-2 bg-blue-900  text-white rounded-xl px-4 py-1">
-                                        {dayjs(el.sys.createdAt).format(
-                                            "DD-MM-YYYY"
-                                        )}
-                                    </span>
-                                    <div className="px-5 py-5 mt-6">
-                                        <h2 className="font-bold text-sm">
-                                            {el.fields.title}
-                                        </h2>
-                                        <p className="text-xs">
-                                            {el.fields.description}
-                                        </p>
-                                    </div>
-                                    <div className="px-5 pb-5 flex flex-wrap gap-2">
-                                        {el.fields.tags.map(tag => (
-                                            <>
-                                                <span
-                                                    key={tag}
-                                                    className="text-xs px-2 py-1 bg-gray-100 rounded-lg"
-                                                >
-                                                    {tag}
-                                                </span>
-                                            </>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                ))}
+                {blogPosts?.map(el => {
+                    return <BlogCard el={el} key={el.fields.slug} />;
+                })}
             </div>
         </div>
     );
