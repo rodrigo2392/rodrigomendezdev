@@ -6,6 +6,10 @@ html {
   font-size: 20px;
   scroll-behavior: smooth;
 }
+body
+{
+   position:fixed;
+}
 
 code{
   display: flex;
