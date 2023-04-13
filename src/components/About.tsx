@@ -12,7 +12,7 @@ const muslish = Mulish({
 export default function About() {
     return (
         <div className="pb-10">
-            <h1 className="text-center font-bold text-3xl">Sobre mí</h1>
+            <h2 className="text-center font-bold text-3xl">Sobre mí</h2>
             <a
                 target="_blank"
                 href="https://www.google.com/search?q=guadalajara+jalisco&oq=guadalajara+jali&aqs=edge.1.69i57j0i131i433i512j0i512l7.5066j0j1&sourceid=chrome&ie=UTF-8"

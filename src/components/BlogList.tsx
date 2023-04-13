@@ -9,7 +9,7 @@ interface Props {
 const BlogList = ({ blogPosts }: Props) => {
     return (
         <div className="pb-10">
-            <h1 className="text-center font-bold text-3xl">Blog</h1>
+            <h2 className="text-center font-bold text-3xl">Blog</h2>
             <a href="https://www.youtube.com/@rodrigomendezdev">
                 <div className="flex flex-row mb-6 justify-center items-center pt-4">
                     <p className="font-bold text-primary text-center mr-2">

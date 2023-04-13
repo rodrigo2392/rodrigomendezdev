@@ -33,7 +33,7 @@ const stack = [
 const Social = () => {
     return (
         <div>
-            <h1 className="text-center font-bold text-3xl">Redes sociales</h1>
+            <h2 className="text-center font-bold text-3xl">Redes sociales</h2>
             <p className="font-bold text-primary text-center mr-2 pt-4">
                 Sígueme en mis redes 📱
             </p>

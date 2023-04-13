@@ -106,7 +106,7 @@ const Header = () => {
                 </div>
             </div>
             <div className="w-full flex justify-center mt-10 flex-col text-center">
-                <h1 className="font-bold text-3xl">Tecnologías</h1>
+                <h2 className="font-bold text-3xl">Tecnologías</h2>
                 <p className="font-bold text-primary text-center mb-6 pt-4">
                     Con lo que actualmente trabajo 💻
                 </p>
