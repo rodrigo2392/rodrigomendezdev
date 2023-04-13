@@ -23,7 +23,7 @@ const options = {
             const { data } = node;
             return (
                 <Image
-                    src={`https://${data?.target?.fields?.file?.url}`}
+                    src={`https:${data?.target?.fields?.file?.url}`}
                     width={1080}
                     height={720}
                     alt="Linkedin"
