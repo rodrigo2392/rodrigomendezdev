@@ -72,6 +72,7 @@ const Post = ({ post }: Props) => {
                     <ShareButton
                         title={post.fields.title}
                         url={`https://rodrigomendez.dev/blog/${post.fields.slug}`}
+                        text={post.fields.description}
                     />
                 </div>
             </div>
@@ -109,6 +110,7 @@ const Post = ({ post }: Props) => {
                         <ShareButton
                             title={post.fields.title}
                             url={`https://rodrigomendez.dev/blog/${post.fields.slug}`}
+                            text={post.fields.description}
                         />
                     </div>
                 </div>

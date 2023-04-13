@@ -4,11 +4,13 @@ import { FaShare } from "react-icons/fa";
 interface Props {
     title: string;
     url: string;
+    text: string;
 }
 
-export default function ExportButton({ title, url }: Props) {
+export default function ExportButton({ title, url, text }: Props) {
     const share = () => {
         navigator.share({
+            text,
             url,
             title,
         });
