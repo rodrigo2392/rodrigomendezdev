@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
 import React from "react";
-import Head from "next/head";
 import { NextPageContext } from "next";
 import { Poppins } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import BlogPost from "@/components/BlogPost";
 import Footer from "@/components/Footer";
+import SEO from "@/components/Seo";
 import { getPost } from "../../contentful";
 import { BlogPost as Post } from "../../contentful/types";
 
@@ -47,59 +47,13 @@ export default function Home({ post }: Props) {
 
     return (
         <>
-            <Head>
-                <meta
-                    name="viewport"
-                    content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
-                />
-                <title>{post.fields.title}</title>
-                <link rel="icon" href="/favicon.ico" />
-                <meta name="title" content={post.fields.title} />
-                <meta name="description" content={post.fields.description} />
-                <meta name="keywords" content={post.fields.tags.join()} />
-                <meta name="robots" content="index, follow" />
-                <meta
-                    httpEquiv="Content-Type"
-                    content="text/html; charset=utf-8"
-                />
-                <meta name="language" content="Spanish" />
-                <meta name="revisit-after" content="10 days" />
-                <meta name="author" content="Rodrigo Méndez" />
-                <meta itemProp="name" content={slug?.toString()} />
-                <meta
-                    itemProp="description"
-                    content={post.fields.description}
-                />
-
-                <meta name="twitter:card" content="summary" />
-                <meta name="twitter:title" content={post.fields.title} />
-                <meta
-                    name="twitter:description"
-                    content={post.fields.description}
-                />
-                <meta name="twitter:site" content="@rodrigom_dev" />
-                <meta name="twitter:creator" content="@rodrigom_dev" />
-                <meta
-                    name="twitter:image:src"
-                    content={`https:${post.fields.cover.fields.file.url}`}
-                />
-
-                <meta name="og:title" content={post.fields.title} />
-                <meta name="og:description" content={post.fields.description} />
-                <meta
-                    name="og:image"
-                    content={`https:${post.fields.cover.fields.file.url}`}
-                />
-                <meta
-                    name="og:url"
-                    content={`https://rodrigomendez.dev/blog/${slug}`}
-                />
-                <meta name="og:site_name" content="rodrigomendez.dev" />
-                <meta name="og:locale" content="es_MX" />
-                <meta name="og:type" content="website" />
-
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+            <SEO
+                title={post.fields.title}
+                description={post.fields.description}
+                tags={post.fields.tags.join()}
+                image={`https:${post.fields.cover.fields.file.url}`}
+                url={`https://rodrigomendez.dev/blog/${slug}`}
+            />
             <main className={poppins.className}>
                 <Navbar exterior />
                 <div
