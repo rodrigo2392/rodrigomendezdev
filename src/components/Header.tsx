@@ -59,8 +59,8 @@ const Header = () => {
                     />
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="flex flex-col justify-center order-2 md:order-1 text-center md:text-left">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+                <div className="flex flex-col justify-center order-2 lg:order-1 text-center lg:text-left">
                     <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl">
                         Frontend Developer
                     </h1>
@@ -68,7 +68,7 @@ const Header = () => {
                         ¡Hola! Soy Rodrigo Méndez, tengo 10 años de experiencia
                         como desarrollador de software.
                     </p>
-                    <div className="pb-9 pt-7 flex flex-col md:flex-row gap-6  items-center">
+                    <div className="pb-9 pt-7 flex flex-col md:flex-row gap-6  items-center justify-center lg:justify-start">
                         <Button
                             title="Visitar tienda"
                             url="https://shop.rodrigomendez.dev"
@@ -102,11 +102,11 @@ const Header = () => {
                         </a>
                     </div>
                 </div>
-                <div className="flex justify-center h-auto order-1 md:order-2 mb-10 md:mb-0">
+                <div className="flex justify-center h-auto order-1 lg:order-2 mb-10 lg:mb-0 px-10">
                     <Image
                         src={ProfileImageColor}
                         alt="Perfil"
-                        className="rounded-full"
+                        className="max-w-sm w-full lg:h-80 lg:w-80 rounded-full"
                         width={600}
                         height={600}
                         loading="eager"
