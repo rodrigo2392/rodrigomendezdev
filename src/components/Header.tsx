@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Mulish } from "next/font/google";
 import ShareButton from "@/components/ShareButton";
+import Button from "@/components/Button";
 import ProfileImageColor from "../../public/assets/image/perfil-c.png";
 import TailwindImage from "../../public/assets/image/tailwind.png";
 import ReactImage from "../../public/assets/image/react.png";
@@ -67,6 +68,13 @@ const Header = () => {
                         ¡Hola! Soy Rodrigo Méndez, tengo 10 años de experiencia
                         como desarrollador de software.
                     </p>
+                    <div className="pb-9 pt-7 flex flex-col md:flex-row gap-6  items-center">
+                        <Button
+                            title="Visitar tienda"
+                            url="https://shop.rodrigomendez.dev"
+                            black
+                        />
+                    </div>
                     <div className="pt-4 flex flex-row gap-2 justify-center md:justify-start">
                         <a
                             href="https://www.linkedin.com/in/%E2%98%95-rodrigo-m%C3%A9ndez/"
@@ -99,13 +107,14 @@ const Header = () => {
                         src={ProfileImageColor}
                         alt="Perfil"
                         className="rounded-full"
-                        width={300}
+                        width={600}
+                        height={600}
                         loading="eager"
                         priority
                     />
                 </div>
             </div>
-            <div className="w-full flex justify-center mt-10 flex-col text-center">
+            <div className="w-full flex justify-center mt-10 flex-col text-center relative">
                 <h2 className="font-bold text-3xl">Tecnologías</h2>
                 <p className="font-bold text-primary text-center mb-6 pt-4">
                     Con lo que actualmente trabajo 💻

@@ -4,6 +4,7 @@ import TiktokIcon from "../../public/assets/icons/tiktok.svg";
 import YoutubeIcon from "../../public/assets/icons/youtube.svg";
 import TwitterIcon from "../../public/assets/icons/twitter.svg";
 import InstagramIcon from "../../public/assets/icons/instagram.svg";
+import DiscordIcon from "../../public/assets/icons/discord.png";
 
 const stack = [
     {
@@ -28,6 +29,11 @@ const stack = [
         name: "Instagram",
         url: "https://www.instagram.com/rodrigomendezdev/",
     },
+    {
+        image: DiscordIcon,
+        name: "Discord",
+        url: "https://discord.gg/p54fAFSa",
+    },
 ];
 
 const Social = () => {
@@ -48,7 +54,7 @@ const Social = () => {
                         <div className="flex justify-center items-center bg-white rounded-full shadow-md w-16 h-16">
                             <Image
                                 src={el.image}
-                                alt="Html"
+                                alt={el.name}
                                 width={400}
                                 height={400}
                                 className="w-10 h-10"
