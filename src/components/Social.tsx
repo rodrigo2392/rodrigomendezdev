@@ -32,7 +32,7 @@ const stack = [
     {
         image: DiscordIcon,
         name: "Discord",
-        url: "https://discord.gg/p54fAFSa",
+        url: "https://discord.gg/Ac4MEkKGVm",
     },
 ];
 
