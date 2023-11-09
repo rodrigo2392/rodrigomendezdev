@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Mulish } from "next/font/google";
 import ShareButton from "@/components/ShareButton";
 import Button from "@/components/Button";
-import ProfileImageColor from "../../public/assets/image/perfil-c.png";
+import ProfileImageColor from "../../public/assets/image/perfil.png";
 import TailwindImage from "../../public/assets/image/tailwind.png";
 import ReactImage from "../../public/assets/image/react.png";
 import HtmlImage from "../../public/assets/image/html.png";
