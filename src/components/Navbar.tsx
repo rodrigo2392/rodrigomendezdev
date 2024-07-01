@@ -65,17 +65,6 @@ const Navbar = ({ exterior }: Props) => {
                         </li>
                         <li>
                             <Link
-                                href="https://shop.rodrigomendez.dev"
-                                onClick={() => setOpen(false)}
-                                className="block py-2 pl-1 pr-2 rounded text-sm"
-                                aria-current="page"
-                                scroll={false}
-                            >
-                                Tienda
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
                                 href={`${exterior ? "/#acerca" : "#acerca"}`}
                                 onClick={() => setOpen(false)}
                                 className="block py-2 pl-1 pr-2 rounded text-sm"

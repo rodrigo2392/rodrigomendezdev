@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { Mulish } from "next/font/google";
 import ShareButton from "@/components/ShareButton";
-import Button from "@/components/Button";
 import ProfileImageColor from "../../public/assets/image/perfil.png";
 import TailwindImage from "../../public/assets/image/tailwind.png";
 import ReactImage from "../../public/assets/image/react.png";
@@ -66,15 +65,9 @@ const Header = () => {
                     </h1>
                     <p className={` ${muslish.className} pt-6 text-secondary`}>
                         ¡Hola! Soy Rodrigo Méndez, tengo 10 años de experiencia
-                        como desarrollador de software.
+                        como desarrollador de software. Trabajo principalmente
+                        en proyectos de tipo startup e ideas interesantes.
                     </p>
-                    <div className="pb-9 pt-7 flex flex-col md:flex-row gap-6  items-center justify-center lg:justify-start">
-                        <Button
-                            title="Visitar tienda"
-                            url="https://shop.rodrigomendez.dev"
-                            black
-                        />
-                    </div>
                     <div className="pt-4 flex flex-row gap-2 justify-center md:justify-start">
                         <a
                             href="https://www.linkedin.com/in/%E2%98%95-rodrigo-m%C3%A9ndez/"
