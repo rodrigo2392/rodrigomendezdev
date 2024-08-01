@@ -43,6 +43,7 @@ rubiconproject.com, 24228, RESELLER, 0bfd66d529a55807
 xandr.com,13117, RESELLER
 google.com, pub-9231669983002423, RESELLER, f08c47fec0942fa0
 google.com, pub-1782014328826919, RESELLER, f08c47fec0942fa0
+google.com, pub-1625981018284145, DIRECT, f08c47fec0942fa0
 rubiconproject.com, 13380, RESELLER, 0bfd66d529a55807
 mediafuse.com, 604, DIRECT
 appnexus.com, 9538, RESELLER
